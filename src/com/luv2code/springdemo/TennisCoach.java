@@ -15,13 +15,13 @@ public class TennisCoach implements Coach {
 	
 	//define a setter method
 	@Autowired //spring will scan for a component(class) that implements FortuneService Interface
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println(">> TennisCoach : inside setFortuneService() method");
+	public void doSomeCrazyStuff(FortuneService theFortuneService) {
+		System.out.println(">> TennisCoach : inside doSomeCrazyStuff() method");
 		fortuneService = theFortuneService;
 	}
 	
 	
-//	@Autowired  //Spring will scan for a component(class) that implements FortuneService interface // HappyFortuneService meets the requiremen
+//	@Autowired  //Spring will scan for a component(class) that implements FortuneService interface // HappyFortuneService meets the requirement
 //	public TennisCoach(FortuneService theFortuneService) {
 //		fortuneService = theFortuneService;  //Constructor created here but will executed by driver class
 //	}
