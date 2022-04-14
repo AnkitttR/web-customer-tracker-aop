@@ -6,10 +6,10 @@ public class SwimCoach implements Coach {
 
 	private FortuneService fortuneService; //Defining private field fortuneService
 	
-	@Value("${foo.email}")
+	@Value("${foo.email}")  //Injecting values from sport.properties file
 	private String email;
 	
-	@Value("${foo.team}")
+	@Value("${foo.team}")  //Injecting values from sport.properties file
 	private String team;
 	
 	public SwimCoach(FortuneService theFortuneService) {
@@ -30,4 +30,17 @@ public class SwimCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public String getTeam() {
+		return team;
+	}
+
+	
 }
