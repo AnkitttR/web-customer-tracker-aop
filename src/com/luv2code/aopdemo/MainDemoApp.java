@@ -15,7 +15,8 @@ public class MainDemoApp {
 		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 									//Hey context give me the bean from AccountDAO class
 		//call the business method
-		theAccountDAO.addAccount(); 
+		theAccountDAO.addAccount(); //AccountDAO class ke under addAccount method hai, lekin usko
+		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		
 		//close the context
 
