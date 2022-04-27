@@ -18,6 +18,12 @@ public class MainDemoApp {
 		theAccountDAO.addAccount(); //AccountDAO class ke under addAccount method hai, lekin usko
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		
+		// do it again!
+		System.out.println("\n let's call it again!\n");
+		
+		//call the business method again
+		theAccountDAO.addAccount();
+		
 		//close the context
 		context.close();
 	}
