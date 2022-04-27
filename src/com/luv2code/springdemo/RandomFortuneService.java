@@ -24,8 +24,7 @@ public class RandomFortuneService implements FortuneService {
 		int index = myRandom.nextInt(data.length); //data.length for finding length of array
 		
 		String theFortune = data[index];
-		
-		
+	
 		return theFortune;
 	}
 

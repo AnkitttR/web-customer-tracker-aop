@@ -6,7 +6,7 @@ public class SwimJavaConfigDemoApp {
 
 	public static void main(String[] args) {
 		
-		//read spring config java class
+		//read spring config java class without any XML file with the help of @Configuration
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(SportConfig.class);
 		
