@@ -1,10 +1,13 @@
 package com.luv2code.aopdemo;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class MainDemoApp {
 
 	public static void main(String[] args) {
 		
 		//read spring config java class
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext
 		
 		//get the bean from spring container
 		
