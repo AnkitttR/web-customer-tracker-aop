@@ -4,6 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component    //spring will find it automatically using component scanning //Hey this is a component
 public class AccountDAO {
+	
+	private String name;
+	private String serviceCode;
 
 	public void addAccount(Account theAccount, boolean vipFlag) {
 		
@@ -16,6 +19,24 @@ public class AccountDAO {
 	return false;
 	
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getServiceCode() {
+		return serviceCode;
+	}
+
+	public void setServiceCode(String serviceCode) {
+		this.serviceCode = serviceCode;
+	}
+	
+	
 	
 }
 
