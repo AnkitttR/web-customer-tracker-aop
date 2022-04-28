@@ -3,6 +3,7 @@ package com.luv2code.aopdemo.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +25,7 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Executing @Before advice on method");
 		
 		//display the method signature
-		
+		MethodSignature methoSig = (MethodSignature) theJoinPoint.getSignature(); //JoinPoint interface ke variable theJoinPoint ki help se getSignature() method call karenge
 		
 		//display the method arguments
 	}
