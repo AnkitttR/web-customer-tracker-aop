@@ -24,9 +24,12 @@ public class MainDemoApp {
 		Account myAccount = new Account();
 		theAccountDAO.addAccount(myAccount, true); //AccountDAO class ke under addAccount method hai, lekin usko
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
+		theAccountDAO.doWork();
+		
 		
 		//call the membership business method
 		theMembershipDAO.addSillyMember();
+		theMembershipDAO.goToSleep();
 		
 		//close the context
 		context.close();
