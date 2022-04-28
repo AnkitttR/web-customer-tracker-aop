@@ -16,9 +16,19 @@ public class MyDemoLoggingAspect {
 	@Pointcut("execution(* com.luv2code.aopdemo.dao.*.*(..))")
 	private void forDaoPackage() {}
 	
+	// create pointcut for getter methods
+	
+	
+	//create pointcut for setter methods
+	
+	
+	//create point: include package ...exclude getter/setter
+	
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
 	//@Before("execution(void add*())") //any method call void add*() please call this
 	//@Before("execution(* add*(..))") //any method call "any return type" add*() please call this
+	
+	
 	@Before("forDaoPackage()")   //any method call "any return type" add*() please call this
 	public void beforeAddAccountAdvice() {
 		
