@@ -25,7 +25,7 @@ public class MyDemoLoggingAspect {
 	private void setter() {}
 	
 	//create pointcut: include package ...exclude getter/setter
-	@Pointcut("forDaoPackage() && !()getter() || setter() ")
+	@Pointcut("forDaoPackage() && !getter()||setter() ")
 	private void forDaoPackageNoGetterSetter() {}
 	
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
