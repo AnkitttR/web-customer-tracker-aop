@@ -33,13 +33,13 @@ public class MyDemoLoggingAspect {
 	//@Before("execution(* add*(..))") //any method call "any return type" add*() please call this
 	
 	
-	@Before("forDaoPackage()")   //any method call "any return type" add*() please call this
+	@Before("forDaoPackageNoGetterSetter()")   //any method call "any return type" add*() please call this
 	public void beforeAddAccountAdvice() {
 		
 		System.out.println("\n=====>>> Executing @Before advice on method");
 	}
 	
-	@Before("forDaoPackage()")
+	@Before("forDaoPackageNoGetterSetter()")
 	public void performApiAnalytics() {
 		
 		System.out.println("\n=====>>> Performing API analytics");
