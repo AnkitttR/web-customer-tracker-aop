@@ -26,6 +26,13 @@ public class MainDemoApp {
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		theAccountDAO.doWork();
 		
+		// call the accountdao getter/setter methods
+		theAccountDAO.setName("foobar");
+		theAccountDAO.setServiceCode("silver");
+		
+		String name = theAccountDAO.getName();
+		String code = theAccountDAO.getServiceCode()
+		
 		
 		//call the membership business method
 		theMembershipDAO.addSillyMember();
