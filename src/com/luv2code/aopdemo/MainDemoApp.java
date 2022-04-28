@@ -22,7 +22,7 @@ public class MainDemoApp {
 		
 		//call the business method
 		Account myAccount = new Account();
-		theAccountDAO.addAccount(myAccount); //AccountDAO class ke under addAccount method hai, lekin usko
+		theAccountDAO.addAccount(myAccount, true); //AccountDAO class ke under addAccount method hai, lekin usko
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		
 		//call the membership business method
