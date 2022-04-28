@@ -22,6 +22,8 @@ public class MainDemoApp {
 		
 		//call the business method
 		Account myAccount = new Account();
+		myAccount.setName("Madhu");
+		myAccount.setLevel("Platinum");
 		theAccountDAO.addAccount(myAccount, true); //AccountDAO class ke under addAccount method hai, lekin usko
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		theAccountDAO.doWork();
