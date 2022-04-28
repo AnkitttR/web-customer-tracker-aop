@@ -25,9 +25,18 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Executing @Before advice on method");
 		
 		//display the method signature
-		MethodSignature methoSig = (MethodSignature) theJoinPoint.getSignature(); //JoinPoint interface ke variable theJoinPoint ki help se getSignature() method call karenge
+		MethodSignature methodSig = (MethodSignature) theJoinPoint.getSignature(); //JoinPoint interface ke variable theJoinPoint ki help se getSignature() method call karenge
+		
+		System.out.println("Method: " + methodSig);
 		
 		//display the method arguments
+		
+		
+		//get args
+		
+		//loop thru args
+		
+		
 	}
 	
 
