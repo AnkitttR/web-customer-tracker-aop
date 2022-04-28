@@ -26,7 +26,7 @@ public class MainDemoApp {
 		          //access karne ke liye AccountDAO class ke variable theAccountDAO ka use karenge
 		
 		//call the membership business method
-		theMembershipDAO.addAccount();
+		theMembershipDAO.addSillyMember();
 		
 		//close the context
 		context.close();
