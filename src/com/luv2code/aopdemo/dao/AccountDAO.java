@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 @Component    //spring will find it automatically using component scanning //Hey this is a component
 public class AccountDAO {
 
-	public void addAccount() {
+	public void addAccount(Account theAccount) {
+		
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
 	}
 }
