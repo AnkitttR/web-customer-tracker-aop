@@ -1,5 +1,6 @@
 package com.luv2code.aopdemo.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
@@ -18,7 +19,7 @@ public class MyDemoLoggingAspect {
 	
 	
 	@Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")   //any method call "any return type" add*() please call this
-	public void beforeAddAccountAdvice() {
+	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
 		
 		System.out.println("\n=====>>> Executing @Before advice on method");
 		
