@@ -14,7 +14,7 @@ public class MyDemoLoggingAspect {
 	
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
 	//@Before("execution(void add*())") //any method call void add*() please call this
-	@Before("execution(* add*(com.luv2code.aopdemo.dao.Account, ..))") //any method call "any return type" add*() please call this
+	@Before("execution(* add*(..))") //any method call "any return type" add*() please call this
 	public void beforeAddAccountAdvice() {
 		
 		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
