@@ -1,5 +1,6 @@
 package com.luv2code.aopdemo.aspect;
 
+import java.lang.System.Logger;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
@@ -20,6 +21,9 @@ import com.luv2code.aopdemo.dao.Account;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+	
+	private Logger myLogger = Logger.getLogger(getClass().getName());
+	
 	
 	@Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(ProceedingJoinPoint theProceedingJoinPoint) throws Throwable {
