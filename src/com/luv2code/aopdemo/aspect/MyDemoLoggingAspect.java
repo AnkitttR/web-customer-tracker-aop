@@ -35,12 +35,28 @@ public class MyDemoLoggingAspect {
 		
 		//let's post-process the data ... let's modify it : :-)
 		
+		
+		//convert the account names to uppercase
+		convertAccountNamesToUpperCase(result);
+		
+	}
+	
+	private void convertAccountNamesToUpperCase(List<Account> result) {
+		
+		// loop through accounts
+		
+		//get uppercase version of name
+		
+		//update the name on the account
+		
 	}
 		
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
 	//@Before("execution(void add*())") //any method call void add*() please call this
 	//@Before("execution(* add*(..))") //any method call "any return type" add*() please call this
 		
+	
+
 	@Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")   //any method call "any return type" add*() please call this
 	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
 		
