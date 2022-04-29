@@ -41,8 +41,9 @@ public class MyDemoLoggingAspect {
 		try {
 			result = theProceedingJoinPoint.proceed();
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//log the exception
+			
+			//give user a custom message
 		}
 		
 		//get end timestamp
