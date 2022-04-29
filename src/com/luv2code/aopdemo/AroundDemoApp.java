@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.luv2code.aopdemo.dao.Account;
 import com.luv2code.aopdemo.dao.AccountDAO;
 import com.luv2code.aopdemo.dao.MembershipDAO;
+import com.luv2code.aopdemo.service.TrafficFortuneService;
 
 public class AroundDemoApp {
 
@@ -16,29 +17,10 @@ public class AroundDemoApp {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		//get the bean from spring container
-		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
+		TrafficFortuneService theFortuneService = context.getBean("trafficFortuneService", TrafficFortuneService.class);
 									//Hey context give me the bean from AccountDAO class
 		
-		// call method to find the accounts
-		List<Account> theAccounts = null;
-				
-				try {
-					// add a boolean flag to simulate exceptions
-					boolean tripWire = true;
-				theAccounts = theAccountDAO.findAccounts(tripWire);
-				}
-				catch (Exception exc) {
-					
-					System.out.println("\n\n Main Program ... caught exception:" + exc);
-				}
-				
-		//display the accounts
-		System.out.println("\n\n Main Program: AfterThrowingDemoApp");
-		System.out.println("-----");
 		
-		System.out.println(theAccounts);
-		
-		System.out.println("\n");
 		
 		//close the context
 		context.close();
