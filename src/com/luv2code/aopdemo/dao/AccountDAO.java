@@ -17,6 +17,11 @@ public class AccountDAO {
 		
 		List<Account> myAccounts = new ArrayList<>();
 		
+		// create sample accounts
+		
+		
+		//add them to our accounts list
+		
 		
 		return myAccounts;
 		
