@@ -45,10 +45,14 @@ public class MyDemoLoggingAspect {
 		
 		// loop through accounts
 		
-		//get uppercase version of name
+		for(Account tempAccount : result) {
 		
-		//update the name on the account
-		
+			//get uppercase version of name
+			String theUpperName = tempAccount.getName().toUpperCase();	
+			
+			//update the name on the account
+			tempAccount.setName(theUpperName);
+		}
 	}
 		
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
