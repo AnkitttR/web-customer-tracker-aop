@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TrafficFortuneService {
 
-	public String getFortune() {
+	public String getFortune(boolean tripWire) {
 		
 		// simulate a delay 
 		try {
