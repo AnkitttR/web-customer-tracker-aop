@@ -23,6 +23,18 @@ public class MyDemoLoggingAspect {
 	
 	@Around("execution(* com.luv2code.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(ProceedingJoinPoint theProceedingJoinPoint) throws Throwable {
+		
+		//print out method we are advising on
+		
+		//get begin timestamp
+		
+		//now, let's execute the method
+		
+		//get end timestamp
+		
+		//compute duration & display it
+		
+		
 		return null;
 		
 	}
