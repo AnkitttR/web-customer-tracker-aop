@@ -38,7 +38,12 @@ public class MyDemoLoggingAspect {
 		//now, let's execute the method
 		Object result = null;
 				
-		result = theProceedingJoinPoint.proceed();
+		try {
+			result = theProceedingJoinPoint.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		//get end timestamp
 		long end = System.currentTimeMillis();
