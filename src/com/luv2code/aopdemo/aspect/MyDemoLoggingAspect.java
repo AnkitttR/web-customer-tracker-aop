@@ -21,7 +21,7 @@ public class MyDemoLoggingAspect {
 	
 	@AfterReturning(
 			pointcut = "execution(* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..))",
-			returning= "result")
+			returning= "result") //result is variable where AOP will inject the result for our application
 	public void afterReturningFindAccountsAdvice(
 			JoinPoint theJoinPoint, List<Account> result) {
 		
@@ -38,7 +38,7 @@ public class MyDemoLoggingAspect {
 		
 		//convert the account names to uppercase
 		convertAccountNamesToUpperCase(result);
-		
+		System.out.println("\n=====>>> result is: " + result);
 	}
 	
 	private void convertAccountNamesToUpperCase(List<Account> result) {
