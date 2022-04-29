@@ -2,7 +2,10 @@ package com.luv2code.aopdemo.aspect;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
+import java.util.List;
+
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -16,6 +19,16 @@ import com.luv2code.aopdemo.dao.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 
+	// add a new advice for @AfterReturning on the findAccounts method
+	
+	@AfterReturning(
+			pointcut = "* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..)",
+			returning= "result")
+	public void afterReturningFindAccountsAdvice(
+			JoinPoint theJoinPoint, List<Account> result) {
+		
+		
+	}
 	
 	
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this

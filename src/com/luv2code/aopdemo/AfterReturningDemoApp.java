@@ -28,6 +28,8 @@ public class AfterReturningDemoApp {
 		
 		System.out.println(theAccounts);
 		
+		System.out.println("\n");
+		
 		//close the context
 		context.close();
 	}
