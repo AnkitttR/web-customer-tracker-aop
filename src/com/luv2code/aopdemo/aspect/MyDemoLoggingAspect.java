@@ -29,15 +29,19 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Executing @Around on method: " + method);
 		
 		//get begin timestamp
+		long begin = System.currentTimeMillis();
 		
 		//now, let's execute the method
+		Object result = theProceedingJoinPoint.proceed();
 		
 		//get end timestamp
+		long end = System.currentTimeMillis();
 		
 		//compute duration & display it
+		long duration = end - begin;
+		System.out.println("\n=====>>> Duration: " + duration/1000.0 + "seconds");
 		
-		
-		return null;
+		return result;
 		
 	}
 	
