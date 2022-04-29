@@ -31,6 +31,7 @@ public class AfterThrowingDemoApp {
 					
 					System.out.println("\n\n Main Program ... caught exception:" + exc);
 				}
+				
 		//display the accounts
 		System.out.println("\n\n Main Program: AfterThrowingDemoApp");
 		System.out.println("-----");
