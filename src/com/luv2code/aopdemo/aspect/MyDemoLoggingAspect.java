@@ -1,7 +1,5 @@
 package com.luv2code.aopdemo.aspect;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
-
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
@@ -22,7 +20,7 @@ public class MyDemoLoggingAspect {
 	// add a new advice for @AfterReturning on the findAccounts method
 	
 	@AfterReturning(
-			pointcut = "* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..)",
+			pointcut = "execution(* com.luv2code.aopdemo.dao.AccountDAO.findAccounts(..))",
 			returning= "result")
 	public void afterReturningFindAccountsAdvice(
 			JoinPoint theJoinPoint, List<Account> result) {
@@ -35,16 +33,14 @@ public class MyDemoLoggingAspect {
 		//print out the results of the method call
 		System.out.println("\n=====>>> result is: " + result);
 		
-		
+		//let's post-process the data ... let's modify it : :-)
 		
 	}
-	
-	
+		
 	//@Before("execution(public void add*())")  //any method call void addAccount() please call this
 	//@Before("execution(void add*())") //any method call void add*() please call this
 	//@Before("execution(* add*(..))") //any method call "any return type" add*() please call this
-	
-	
+		
 	@Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")   //any method call "any return type" add*() please call this
 	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
 		

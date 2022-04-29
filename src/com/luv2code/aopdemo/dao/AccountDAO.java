@@ -27,8 +27,6 @@ public class AccountDAO {
 		myAccounts.add(temp2);
 		myAccounts.add(temp3);
 		
-		
-		
 		return myAccounts;
 		
 	}
@@ -64,8 +62,6 @@ public class AccountDAO {
 		System.out.println(getClass() + ": in setServiceCode()");
 		this.serviceCode = serviceCode;
 	}
-	
-	
 	
 }
 
