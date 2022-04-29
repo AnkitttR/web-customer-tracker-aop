@@ -21,8 +21,5 @@ public class TrafficFortuneService {
 		return "Expect heavy traffic this morning";
 		
 		
-		
-		
-		
 	}
 }
