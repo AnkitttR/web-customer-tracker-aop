@@ -29,10 +29,11 @@ public class MyDemoLoggingAspect {
 		
 		// print out which method we are advising on
 		
-		
+		String method = theJoinPoint.getSignature().toShortString();
+		System.out.println("\n=====>>> Executing @AfterReturning on method: " + method);
 		
 		//print out the results of the method call
-		
+		System.out.println("\n=====>>> result is: " + result);
 		
 		
 		
