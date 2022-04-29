@@ -25,6 +25,8 @@ public class MyDemoLoggingAspect {
 	public Object aroundGetFortune(ProceedingJoinPoint theProceedingJoinPoint) throws Throwable {
 		
 		//print out method we are advising on
+		String method = theProceedingJoinPoint.getSignature().toShortString();
+		System.out.println("\n=====>>> Executing @Around on method: " + method);
 		
 		//get begin timestamp
 		
