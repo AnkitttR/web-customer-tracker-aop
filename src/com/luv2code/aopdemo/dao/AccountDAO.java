@@ -1,5 +1,8 @@
 package com.luv2code.aopdemo.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 @Component    //spring will find it automatically using component scanning //Hey this is a component
@@ -7,6 +10,17 @@ public class AccountDAO {
 	
 	private String name;
 	private String serviceCode;
+	
+	// add a new method: findAccounts()
+	
+	public List<Account> findAccounts(){
+		
+		List<Account> myAccounts = new ArrayList<>();
+		
+		
+		return myAccounts;
+		
+	}
 
 	public void addAccount(Account theAccount, boolean vipFlag) {
 		
