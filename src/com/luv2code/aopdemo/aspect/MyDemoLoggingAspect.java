@@ -45,6 +45,7 @@ public class MyDemoLoggingAspect {
 			myLogger.warning(e.getMessage());
 			
 			//rethrow exception
+			throw e;
 		}
 		
 		//get end timestamp
